@@ -1,9 +1,11 @@
 package org.idempiere.xhtd_ab.model.implement;
 
 import java.sql.ResultSet;
+import java.util.List;
 import java.util.Properties;
 
 import org.compiere.model.MUser;
+import org.compiere.model.Query;
 import org.compiere.util.Env;
 import org.compiere.util.Msg;
 import org.idempiere.xhtd_ab.utils.MessageUtil;
@@ -31,15 +33,9 @@ public class MXHTD extends MUser {
 
 			throw new IllegalArgumentException(Msg.getMsg(Env.getCtx(), MessageUtil.ERROR_LENGTH_USER));
 		}
-//		if (newRecord) {
-//			setPassword("abcd123-");
-//
-//		}
-//		if(getFailedLoginCount()>=5) {
-//			setIsLocked(true);
-//			setFailedLoginCount(0);
-//		}
+		
 		return super.beforeSave(newRecord);
 	}
+
 
 }

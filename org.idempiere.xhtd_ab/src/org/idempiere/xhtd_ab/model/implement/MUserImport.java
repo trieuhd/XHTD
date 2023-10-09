@@ -37,7 +37,7 @@ public class MUserImport extends X_TDAB_FILE_IMPORT_USER {
 			return super.beforeSave(newRecord);
 		}
 		
-		MUserTDAB user = new MUserTDAB(getCtx(), 0, get_TrxName());
+		MXHTD user = new MXHTD(getCtx(), 0, get_TrxName());
 		user.setName(getName());
 		user.setDescription(getDescription());
 		user.setEMail(getEMail());
